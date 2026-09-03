@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 100" width="100%" height="100%">
+  <!-- Background -->
+  <rect width="120" height="100" rx="16" fill="#0A0A0A" />
+
+  <!-- M Shape (Crisp White Strokes) -->
+  <g stroke="#FFFFFF" stroke-width="8" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Left vertical leg -->
+    <path d="M 28 76 L 31 25" />
+    
+    <!-- M Chevrons (Left diagonal down & Right diagonal up) -->
+    <path d="M 31 25 L 46 43 L 56 24" />
+    
+    <!-- Right leg upper section -->
+    <path d="M 56 24 L 57 42" />
+    
+    <!-- Right leg lower stub -->
+    <path d="M 59 63 L 60 76" />
+  </g>
+
+  <!-- K / < Shape with Curved Tail (Vibrant Red Stroke) -->
+  <g stroke="#EF4444" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" fill="none">
+    <!-- Upper diagonal of K and swooping curved lower loop -->
+    <path d="M 71 31 L 53 50 C 58 60 67 72 78 70 C 86 68 87 56 81 48" />
+  </g>
+</svg>
