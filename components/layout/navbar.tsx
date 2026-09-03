@@ -29,8 +29,8 @@ export function Navbar() {
             <MKLogo className="w-full h-full" />
           </div> */}
           <div className="flex items-baseline gap-2">
-            <span className="font-semibold text-sm text-white tracking-tight">Mathankumar V</span>
-            <span className="hidden md:inline-block text-neutral-500 text-xs font-normal">/ Flutter Developer</span>
+            <span className="font-semibold text-xl text-white tracking-tight">Mathankumar V</span>
+            <span className="hidden md:inline-block text-neutral-200 text-xs font-normal">/ Flutter Developer</span>
           </div>
         </Link>
 
@@ -63,36 +63,49 @@ export function Navbar() {
 
         {/* Mobile Toggle */}
         <button
-          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-          className="sm:hidden p-1.5 text-neutral-400 hover:text-white"
-          aria-label="Toggle menu"
+          type="button"
+          onClick={() => setMobileMenuOpen((prev) => !prev)}
+          className="sm:hidden p-2 -mr-2 text-neutral-400 hover:text-white focus:outline-none rounded-md transition-colors"
+          aria-label="Toggle navigation menu"
+          aria-expanded={mobileMenuOpen}
         >
           {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
         </button>
       </div>
 
       {/* Mobile Menu Dropdown */}
-      {mobileMenuOpen && (
-        <div className="sm:hidden bg-black sleek-border-b px-6 py-5 space-y-4 text-sm">
-          {NAV_LINKS.map((link) => (
-            <Link
-              key={link.name}
-              href={link.href}
-              onClick={() => setMobileMenuOpen(false)}
-              className="block text-neutral-400 hover:text-white py-1"
-            >
-              {link.name}
-            </Link>
-          ))}
+      <div
+        className={`sm:hidden overflow-hidden transition-all duration-300 ease-in-out bg-black/95 backdrop-blur-xl border-t border-neutral-800/80 ${mobileMenuOpen ? "max-h-64 opacity-100 py-5 px-6" : "max-h-0 opacity-0 py-0 px-6 pointer-events-none"
+          }`}
+      >
+        <div className="flex flex-col space-y-3 text-sm">
+          {NAV_LINKS.map((link) => {
+            const isActive =
+              link.href === "/"
+                ? pathname === "/"
+                : pathname.startsWith(link.href);
+            return (
+              <Link
+                key={link.name}
+                href={link.href}
+                onClick={() => setMobileMenuOpen(false)}
+                className={`py-1.5 transition-colors ${isActive ? "text-white font-medium" : "text-neutral-400 hover:text-white"
+                  }`}
+              >
+                {link.name}
+              </Link>
+            );
+          })}
           <Link
             href="/#contact"
             onClick={() => setMobileMenuOpen(false)}
-            className="block text-white font-medium pt-2 sleek-border-t border-neutral-800"
+            className="flex items-center justify-between text-white font-medium pt-3 mt-1 border-t border-neutral-850"
           >
-            Contact →
+            <span>Contact</span>
+            <ArrowUpRight className="w-4 h-4 text-neutral-400" />
           </Link>
         </div>
-      )}
+      </div>
     </header>
   );
 }
