@@ -10,12 +10,12 @@ export function FeaturedProjects() {
       <div className="max-w-4xl mx-auto px-6">
         <div className="flex items-center justify-between mb-8">
           <div>
-            <h2 className="text-xl font-semibold text-white tracking-tight">Selected Projects</h2>
-            <p className="text-xs text-neutral-400 mt-0.5">Mobile applications, utilities, and full-stack software.</p>
+            <h2 className="text-xl font-semibold text-neutral-900 dark:text-white tracking-tight">Selected Projects</h2>
+            <p className="text-xs text-neutral-500 dark:text-neutral-400 mt-0.5">Mobile applications, utilities, and full-stack software.</p>
           </div>
           <Link
             href="/projects"
-            className="text-xs text-neutral-300 hover:text-white transition-colors"
+            className="text-xs text-neutral-600 dark:text-neutral-300 hover:text-black dark:hover:text-white transition-colors"
           >
             All projects →
           </Link>

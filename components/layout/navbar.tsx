@@ -5,6 +5,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Menu, X, ArrowUpRight } from "lucide-react";
 import { MKLogo } from "@/components/ui/logo";
+import { ThemeToggle } from "@/components/ui/theme-toggle";
 
 const NAV_LINKS = [
   { name: "Work", href: "/projects" },
@@ -17,7 +18,7 @@ export function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-black/75 backdrop-blur-md sleek-border-b">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-white/80 dark:bg-black/75 backdrop-blur-md sleek-border-b">
       <div className="max-w-4xl mx-auto px-6 h-14 flex items-center justify-between">
         {/* Brand / Logo + Identity */}
         <Link
@@ -29,13 +30,13 @@ export function Navbar() {
             <MKLogo className="w-full h-full text-white" />
           </div>
           <div className="flex items-baseline gap-2">
-            <span className="font-semibold text-xl text-white tracking-tight">Mathankumar V</span>
-            <span className="hidden md:inline-block text-neutral-200 text-xs font-normal">/ Flutter Developer</span>
+            <span className="font-semibold text-xl text-neutral-900 dark:text-white tracking-tight">Mathankumar V</span>
+            <span className="hidden md:inline-block text-neutral-500 dark:text-neutral-300 text-xs font-normal">/ Flutter Developer</span>
           </div>
         </Link>
 
         {/* Desktop Nav */}
-        <nav className="hidden sm:flex items-center gap-6 text-xs text-neutral-300">
+        <nav className="hidden sm:flex items-center gap-6 text-xs text-neutral-600 dark:text-neutral-300">
           {NAV_LINKS.map((link) => {
             const isActive =
               link.href === "/"
@@ -45,8 +46,8 @@ export function Navbar() {
               <Link
                 key={link.name}
                 href={link.href}
-                className={`transition-colors hover:text-white ${
-                  isActive ? "text-white font-medium" : "text-neutral-300"
+                className={`transition-colors hover:text-black dark:hover:text-white ${
+                  isActive ? "text-black dark:text-white font-medium" : "text-neutral-600 dark:text-neutral-300"
                 }`}
               >
                 {link.name}
@@ -55,28 +56,32 @@ export function Navbar() {
           })}
           <Link
             href="/#contact"
-            className="text-white hover:text-neutral-300 transition-colors flex items-center gap-1 font-medium pl-2 sleek-border-l border-neutral-800"
+            className="text-neutral-900 dark:text-white hover:text-neutral-600 dark:hover:text-neutral-300 transition-colors flex items-center gap-1 font-medium pl-2 sleek-border-l"
           >
             <span>Contact</span>
             <ArrowUpRight className="w-3.5 h-3.5" />
           </Link>
+          <ThemeToggle />
         </nav>
 
-        {/* Mobile Toggle */}
-        <button
-          type="button"
-          onClick={() => setMobileMenuOpen((prev) => !prev)}
-          className="sm:hidden p-2 -mr-2 text-neutral-300 hover:text-white focus:outline-none rounded-md transition-colors"
-          aria-label="Toggle navigation menu"
-          aria-expanded={mobileMenuOpen}
-        >
-          {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
-        </button>
+        {/* Mobile Right Controls */}
+        <div className="flex items-center gap-2 sm:hidden">
+          <ThemeToggle />
+          <button
+            type="button"
+            onClick={() => setMobileMenuOpen((prev) => !prev)}
+            className="p-2 -mr-2 text-neutral-600 dark:text-neutral-300 hover:text-black dark:hover:text-white focus:outline-none rounded-md transition-colors"
+            aria-label="Toggle navigation menu"
+            aria-expanded={mobileMenuOpen}
+          >
+            {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
+          </button>
+        </div>
       </div>
 
       {/* Mobile Menu Dropdown */}
       <div
-        className={`sm:hidden overflow-hidden transition-all duration-300 ease-in-out bg-black/95 backdrop-blur-xl border-t border-neutral-800/80 ${
+        className={`sm:hidden overflow-hidden transition-all duration-300 ease-in-out bg-white/95 dark:bg-black/95 backdrop-blur-xl border-t border-neutral-200 dark:border-neutral-800/80 ${
           mobileMenuOpen ? "max-h-64 opacity-100 py-5 px-6" : "max-h-0 opacity-0 py-0 px-6 pointer-events-none"
         }`}
       >
@@ -92,7 +97,7 @@ export function Navbar() {
                 href={link.href}
                 onClick={() => setMobileMenuOpen(false)}
                 className={`py-1.5 transition-colors ${
-                  isActive ? "text-white font-medium" : "text-neutral-300 hover:text-white"
+                  isActive ? "text-black dark:text-white font-medium" : "text-neutral-600 dark:text-neutral-300 hover:text-black dark:hover:text-white"
                 }`}
               >
                 {link.name}
@@ -102,10 +107,10 @@ export function Navbar() {
           <Link
             href="/#contact"
             onClick={() => setMobileMenuOpen(false)}
-            className="flex items-center justify-between text-white font-medium pt-3 mt-1 border-t border-neutral-800"
+            className="flex items-center justify-between text-black dark:text-white font-medium pt-3 mt-1 border-t border-neutral-200 dark:border-neutral-800"
           >
             <span>Contact</span>
-            <ArrowUpRight className="w-4 h-4 text-neutral-300" />
+            <ArrowUpRight className="w-4 h-4 text-neutral-500 dark:text-neutral-300" />
           </Link>
         </div>
       </div>

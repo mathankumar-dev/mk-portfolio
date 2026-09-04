@@ -5,6 +5,7 @@ import { SmoothScroll } from "@/components/layout/smooth-scroll";
 import { Navbar } from "@/components/layout/navbar";
 import { Footer } from "@/components/layout/footer";
 import { AmbientBackground } from "@/components/ui/ambient-background";
+import { ThemeProvider } from "@/components/theme-provider";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -19,7 +20,10 @@ const geistMono = Geist_Mono({
 });
 
 export const viewport: Viewport = {
-  themeColor: "#07090e",
+  themeColor: [
+    { media: "(prefers-color-scheme: dark)", color: "#000000" },
+    { media: "(prefers-color-scheme: light)", color: "#fcfcfc" },
+  ],
   width: "device-width",
   initialScale: 1,
 };
@@ -85,15 +89,41 @@ export default function RootLayout({
   return (
     <html
       lang="en"
+      suppressHydrationWarning
       className={`${geistSans.variable} ${geistMono.variable} dark antialiased`}
     >
-      <body className="bg-black text-slate-100 min-h-screen flex flex-col selection:bg-cyan-500/30 selection:text-white relative overflow-x-hidden">
-        <AmbientBackground />
-        <SmoothScroll>
-          <Navbar />
-          <main className="flex-1 flex flex-col relative z-10">{children}</main>
-          <Footer />
-        </SmoothScroll>
+      <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function() {
+                try {
+                  var stored = localStorage.getItem('mk-portfolio-theme');
+                  var isDark = stored === 'dark' || (!stored && window.matchMedia('(prefers-color-scheme: dark)').matches) || stored === 'system';
+                  if (stored === 'light') {
+                    document.documentElement.classList.remove('dark');
+                    document.documentElement.classList.add('light');
+                    document.documentElement.style.colorScheme = 'light';
+                  } else {
+                    document.documentElement.classList.add('dark');
+                    document.documentElement.classList.remove('light');
+                    document.documentElement.style.colorScheme = 'dark';
+                  }
+                } catch (e) {}
+              })();
+            `,
+          }}
+        />
+      </head>
+      <body className="min-h-screen flex flex-col relative overflow-x-hidden">
+        <ThemeProvider>
+          <AmbientBackground />
+          <SmoothScroll>
+            <Navbar />
+            <main className="flex-1 flex flex-col relative z-10">{children}</main>
+            <Footer />
+          </SmoothScroll>
+        </ThemeProvider>
       </body>
     </html>
   );

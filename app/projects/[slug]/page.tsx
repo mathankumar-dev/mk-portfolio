@@ -45,7 +45,7 @@ export default async function ProjectDetailPage({ params }: Props) {
         <div>
           <Link
             href="/projects"
-            className="text-xs font-mono text-neutral-300 hover:text-white transition-colors inline-flex items-center gap-1.5"
+            className="text-xs font-mono text-neutral-600 dark:text-neutral-300 hover:text-black dark:hover:text-white transition-colors inline-flex items-center gap-1.5"
           >
             <ArrowLeft className="w-3.5 h-3.5" />
             <span>Back to projects</span>
@@ -54,7 +54,7 @@ export default async function ProjectDetailPage({ params }: Props) {
 
         {/* Header */}
         <header className="space-y-4 sleek-border-b pb-8">
-          <div className="flex items-center gap-3 text-xs font-mono text-neutral-400">
+          <div className="flex items-center gap-3 text-xs font-mono text-neutral-500 dark:text-neutral-400">
             <span>{project.category}</span>
             <span>•</span>
             <span>{project.year}</span>
@@ -62,11 +62,11 @@ export default async function ProjectDetailPage({ params }: Props) {
             <span>{project.role}</span>
           </div>
 
-          <h1 className="text-3xl sm:text-4xl font-semibold text-white tracking-tight">
+          <h1 className="text-3xl sm:text-4xl font-semibold text-neutral-900 dark:text-white tracking-tight">
             {project.title}
           </h1>
 
-          <p className="text-base sm:text-lg text-neutral-300 leading-relaxed font-normal">
+          <p className="text-base sm:text-lg text-neutral-600 dark:text-neutral-300 leading-relaxed font-normal">
             {project.tagline}
           </p>
 
@@ -74,7 +74,7 @@ export default async function ProjectDetailPage({ params }: Props) {
             {project.technologies.map((tech) => (
               <span
                 key={tech}
-                className="px-2 py-0.5 text-xs font-mono rounded bg-neutral-900 text-neutral-300 border border-neutral-800"
+                className="px-2 py-0.5 text-xs font-mono rounded bg-neutral-100 dark:bg-neutral-900 text-neutral-700 dark:text-neutral-300 border border-neutral-200 dark:border-neutral-800"
               >
                 {tech}
               </span>
@@ -87,7 +87,7 @@ export default async function ProjectDetailPage({ params }: Props) {
                 href={project.githubUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="px-3 py-1.5 rounded bg-neutral-900 text-neutral-200 border border-neutral-800 hover:text-white hover:border-neutral-700 transition-colors inline-flex items-center gap-1.5"
+                className="px-3 py-1.5 rounded bg-neutral-100 dark:bg-neutral-900 text-neutral-800 dark:text-neutral-200 border border-neutral-200 dark:border-neutral-800 hover:text-black dark:hover:text-white hover:border-neutral-300 dark:hover:border-neutral-700 transition-colors inline-flex items-center gap-1.5"
               >
                 <GithubIcon className="w-3.5 h-3.5" />
                 <span>GitHub</span>
@@ -98,7 +98,7 @@ export default async function ProjectDetailPage({ params }: Props) {
                 href={project.liveUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="px-3 py-1.5 rounded bg-white text-black font-medium hover:bg-neutral-200 transition-colors inline-flex items-center gap-1"
+                className="px-3 py-1.5 rounded bg-neutral-900 dark:bg-white text-white dark:text-black font-medium hover:bg-neutral-800 dark:hover:bg-neutral-200 transition-colors inline-flex items-center gap-1"
               >
                 <span>Live Project</span>
                 <ArrowUpRight className="w-3.5 h-3.5" />
@@ -109,20 +109,20 @@ export default async function ProjectDetailPage({ params }: Props) {
 
         {/* Overview */}
         <section className="space-y-3">
-          <h2 className="text-sm font-mono text-neutral-300 uppercase tracking-wider">01. Overview</h2>
-          <p className="text-sm sm:text-base text-neutral-200 leading-relaxed">
+          <h2 className="text-sm font-mono text-neutral-500 dark:text-neutral-300 uppercase tracking-wider">01. Overview</h2>
+          <p className="text-sm sm:text-base text-neutral-700 dark:text-neutral-200 leading-relaxed">
             {project.overview}
           </p>
         </section>
 
         {/* The Problem */}
         <section className="space-y-3">
-          <h2 className="text-sm font-mono text-neutral-300 uppercase tracking-wider">02. The Problem</h2>
-          <h3 className="text-lg font-medium text-white">{project.problem.title}</h3>
-          <p className="text-sm text-neutral-300 leading-relaxed">
+          <h2 className="text-sm font-mono text-neutral-500 dark:text-neutral-300 uppercase tracking-wider">02. The Problem</h2>
+          <h3 className="text-lg font-medium text-neutral-900 dark:text-white">{project.problem.title}</h3>
+          <p className="text-sm text-neutral-600 dark:text-neutral-300 leading-relaxed">
             {project.problem.description}
           </p>
-          <ul className="space-y-1.5 pt-2 text-xs sm:text-sm text-neutral-300 font-mono">
+          <ul className="space-y-1.5 pt-2 text-xs sm:text-sm text-neutral-600 dark:text-neutral-300 font-mono">
             {project.problem.painPoints.map((pt, i) => (
               <li key={i} className="flex items-start gap-2">
                 <span className="text-neutral-400">—</span>
@@ -134,15 +134,15 @@ export default async function ProjectDetailPage({ params }: Props) {
 
         {/* The Solution */}
         <section className="space-y-3">
-          <h2 className="text-sm font-mono text-neutral-300 uppercase tracking-wider">03. The Engineering Solution</h2>
-          <h3 className="text-lg font-medium text-white">{project.solution.title}</h3>
-          <p className="text-sm text-neutral-300 leading-relaxed">
+          <h2 className="text-sm font-mono text-neutral-500 dark:text-neutral-300 uppercase tracking-wider">03. The Engineering Solution</h2>
+          <h3 className="text-lg font-medium text-neutral-900 dark:text-white">{project.solution.title}</h3>
+          <p className="text-sm text-neutral-600 dark:text-neutral-300 leading-relaxed">
             {project.solution.description}
           </p>
-          <ul className="space-y-1.5 pt-2 text-xs sm:text-sm text-neutral-200 font-mono">
+          <ul className="space-y-1.5 pt-2 text-xs sm:text-sm text-neutral-700 dark:text-neutral-200 font-mono">
             {project.solution.keyDeliverables.map((item, i) => (
               <li key={i} className="flex items-start gap-2">
-                <span className="text-emerald-400">✓</span>
+                <span className="text-emerald-600 dark:text-emerald-400">✓</span>
                 <span>{item}</span>
               </li>
             ))}
@@ -151,12 +151,12 @@ export default async function ProjectDetailPage({ params }: Props) {
 
         {/* Architecture */}
         <section className="space-y-4">
-          <h2 className="text-sm font-mono text-neutral-300 uppercase tracking-wider">04. Technical Architecture</h2>
+          <h2 className="text-sm font-mono text-neutral-500 dark:text-neutral-300 uppercase tracking-wider">04. Technical Architecture</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
             {project.architecture.stackBreakdown.map((layer, idx) => (
               <div key={idx} className="sleek-card rounded-lg p-4 space-y-1">
-                <div className="text-xs font-mono text-white font-medium">{layer.layer}</div>
-                <p className="text-xs text-neutral-300 leading-relaxed">{layer.details}</p>
+                <div className="text-xs font-mono text-neutral-900 dark:text-white font-medium">{layer.layer}</div>
+                <p className="text-xs text-neutral-600 dark:text-neutral-300 leading-relaxed">{layer.details}</p>
               </div>
             ))}
           </div>
@@ -164,12 +164,12 @@ export default async function ProjectDetailPage({ params }: Props) {
 
         {/* Key Challenges */}
         <section className="space-y-3">
-          <h2 className="text-sm font-mono text-neutral-300 uppercase tracking-wider">05. Key Technical Challenges</h2>
+          <h2 className="text-sm font-mono text-neutral-500 dark:text-neutral-300 uppercase tracking-wider">05. Key Technical Challenges</h2>
           <div className="space-y-3">
             {project.technicalChallenges.map((item, idx) => (
               <div key={idx} className="sleek-card rounded-lg p-4 space-y-1">
-                <h4 className="text-sm font-medium text-white">{item.title}</h4>
-                <p className="text-xs text-neutral-300 leading-relaxed">{item.solution}</p>
+                <h4 className="text-sm font-medium text-neutral-900 dark:text-white">{item.title}</h4>
+                <p className="text-xs text-neutral-600 dark:text-neutral-300 leading-relaxed">{item.solution}</p>
               </div>
             ))}
           </div>
@@ -177,10 +177,10 @@ export default async function ProjectDetailPage({ params }: Props) {
 
         {/* Results */}
         <section className="space-y-3">
-          <h2 className="text-sm font-mono text-neutral-300 uppercase tracking-wider">06. Results &amp; Impact</h2>
+          <h2 className="text-sm font-mono text-neutral-500 dark:text-neutral-300 uppercase tracking-wider">06. Results &amp; Impact</h2>
           <div className="sleek-card rounded-lg p-5 space-y-2">
             {project.impactAndResults.map((res, idx) => (
-              <div key={idx} className="text-xs sm:text-sm text-neutral-200 flex items-start gap-2">
+              <div key={idx} className="text-xs sm:text-sm text-neutral-700 dark:text-neutral-200 flex items-start gap-2">
                 <span className="text-neutral-400">▹</span>
                 <span>{res}</span>
               </div>
@@ -190,10 +190,10 @@ export default async function ProjectDetailPage({ params }: Props) {
 
         {/* Bottom Nav */}
         <div className="pt-8 sleek-border-t flex items-center justify-between text-xs font-mono">
-          <Link href="/projects" className="text-neutral-300 hover:text-white transition-colors">
+          <Link href="/projects" className="text-neutral-600 dark:text-neutral-300 hover:text-black dark:hover:text-white transition-colors">
             ← Back to all projects
           </Link>
-          <Link href="/#contact" className="text-white hover:text-neutral-300 transition-colors">
+          <Link href="/#contact" className="text-neutral-900 dark:text-white hover:text-neutral-600 dark:hover:text-neutral-300 transition-colors">
             Get in touch →
           </Link>
         </div>
