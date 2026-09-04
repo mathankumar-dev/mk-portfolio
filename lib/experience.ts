@@ -32,7 +32,7 @@ export const EXPERIENCES: ExperienceItem[] = [
   {
     id: "exp-wenxt",
     year: "Jan 2026 – Apr 2026",
-    role: "Full Stack Engineer",
+    role: "Full Stack Engineer Intern",
     company: "WENXT Technologies",
     location: "Chennai, Tamil Nadu, India (On-site)",
     type: "Internship",
@@ -48,7 +48,7 @@ export const EXPERIENCES: ExperienceItem[] = [
   {
     id: "exp-zedindex",
     year: "Jun 2025 – Jul 2025",
-    role: "Software Developer",
+    role: "Software Developer Intern",
     company: "Zedindex",
     location: "Hybrid",
     type: "Internship",

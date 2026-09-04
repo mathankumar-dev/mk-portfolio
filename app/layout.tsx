@@ -4,6 +4,7 @@ import "./globals.css";
 import { SmoothScroll } from "@/components/layout/smooth-scroll";
 import { Navbar } from "@/components/layout/navbar";
 import { Footer } from "@/components/layout/footer";
+import { AmbientBackground } from "@/components/ui/ambient-background";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -86,10 +87,11 @@ export default function RootLayout({
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} dark antialiased`}
     >
-      <body className="bg-[#07090e] text-slate-100 min-h-screen flex flex-col selection:bg-cyan-500/30 selection:text-white relative">
+      <body className="bg-black text-slate-100 min-h-screen flex flex-col selection:bg-cyan-500/30 selection:text-white relative overflow-x-hidden">
+        <AmbientBackground />
         <SmoothScroll>
           <Navbar />
-          <main className="flex-1 flex flex-col">{children}</main>
+          <main className="flex-1 flex flex-col relative z-10">{children}</main>
           <Footer />
         </SmoothScroll>
       </body>

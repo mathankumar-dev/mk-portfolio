@@ -20,7 +20,7 @@ export default function AboutPage() {
             I’m <strong className="text-white font-medium">Mathankumar V</strong>. I build reliable cross-platform mobile applications, publish open-source Flutter packages on <strong className="text-white">pub.dev</strong>, and architect full-stack web platforms with clean system design.
           </p>
           <p>
-            Currently, I am a <strong className="text-white">Flutter Developer Trainee at CYGNUSA Technologies</strong>. Previously, I worked as a <strong className="text-white">Full Stack Engineer at WENXT Technologies</strong>, building React.js and Spring Boot enterprise systems like HRMS.
+            Currently, I am a <strong className="text-white">Flutter Developer Trainee at CYGNUSA Technologies</strong>. Previously, I worked as a <strong className="text-white">Full Stack Engineer Intern at WENXT Technologies</strong>, building React.js and Spring Boot enterprise systems like HRMS.
           </p>
           <p>
             I am also the author and maintainer of published Flutter packages on pub.dev, including <a href="https://pub.dev/packages/cupertino_anchor" target="_blank" rel="noopener noreferrer" className="text-white underline hover:text-neutral-300">cupertino_anchor</a> (a zero-flicker Cupertino dropdown and popover picker) and <a href="https://pub.dev/packages/activity_logger" target="_blank" rel="noopener noreferrer" className="text-white underline hover:text-neutral-300">activity_logger</a> (a structured, production-safe activity logging framework for Dart &amp; Flutter).
