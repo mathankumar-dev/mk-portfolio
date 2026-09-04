@@ -365,8 +365,6 @@ export const PROJECTS: Project[] = [
     technologies: ["Spring Boot", "React.js", "Java", "TypeScript", "RBAC", "MySQL / PostgreSQL", "REST APIs"],
     thumbnail: "/images/projects/hrms-thumb.png",
     heroImage: "/images/projects/hrms-hero.png",
-    liveUrl: "https://github.com/mathankumar-dev/leave-management-system-frontend",
-    githubUrl: "https://github.com/mathankumar-dev/leave-management-system-frontend",
     overview:
       "HRMS streamlines human resource operations by centralizing employee directory records, payroll computations, multi-tier leave approval chains, and organizational announcements.",
     problem: {

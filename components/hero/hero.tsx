@@ -10,7 +10,7 @@ export function Hero() {
       <div className="max-w-4xl mx-auto px-6">
         <div className="space-y-6">
           {/* Subtle status tag */}
-          <div className="inline-flex items-center gap-2 px-2.5 py-1 rounded-full bg-neutral-900 border border-neutral-800 text-xs text-neutral-400">
+          <div className="inline-flex items-center gap-2 px-2.5 py-1 rounded-full bg-neutral-900 border border-neutral-800 text-xs text-neutral-300">
             <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
             <span>Available for new projects &amp; engineering roles</span>
           </div>
@@ -20,8 +20,8 @@ export function Hero() {
             Flutter &amp; Full-Stack Developer crafting reliable mobile architectures and modern web software.
           </h1>
 
-          <p className="text-base sm:text-lg text-neutral-400 leading-relaxed max-w-2xl">
-            I’m <span className="text-neutral-200 font-medium">Mathankumar V</span>. I build cross-platform mobile apps with Flutter (Riverpod, Hive offline persistence) and full-stack systems with Spring Boot, Java, React.js, and Next.js.
+          <p className="text-base sm:text-lg text-neutral-300 leading-relaxed max-w-2xl">
+            I’m <span className="text-white font-medium">Mathankumar V</span>. I build cross-platform mobile apps with Flutter (Riverpod, Hive offline persistence) and full-stack systems with Spring Boot, Java, React.js, and Next.js.
           </p>
 
           {/* Direct Minimal Actions */}
@@ -37,14 +37,14 @@ export function Hero() {
               href="https://github.com/mathankumar-dev"
               target="_blank"
               rel="noopener noreferrer"
-              className="px-4 py-2 rounded-md bg-neutral-900 border border-neutral-800 text-neutral-300 hover:text-white hover:border-neutral-700 transition-colors inline-flex items-center gap-2"
+              className="px-4 py-2 rounded-md bg-neutral-900 border border-neutral-800 text-neutral-200 hover:text-white hover:border-neutral-700 transition-colors inline-flex items-center gap-2"
             >
               <GithubIcon className="w-4 h-4" />
               <span>GitHub</span>
             </a>
             <Link
               href="/about"
-              className="px-4 py-2 text-neutral-400 hover:text-white transition-colors"
+              className="px-4 py-2 text-neutral-300 hover:text-white transition-colors"
             >
               About &amp; Philosophy →
             </Link>

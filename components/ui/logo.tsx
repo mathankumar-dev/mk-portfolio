@@ -10,8 +10,8 @@ interface LogoProps {
 export function MKLogo({
   className = "w-6 h-6",
   size,
-  mColor = "#FFFFFF",
-  accentColor = "#10B981", // Emerald accent matching portfolio palette
+  mColor = "currentColor",
+  accentColor = "#FF1E1E", // Vibrant red matching user's custom mark
 }: LogoProps) {
   return (
     <svg
@@ -22,23 +22,52 @@ export function MKLogo({
       style={size ? { width: size, height: size } : undefined}
       aria-label="MK Logo"
     >
-      {/* M Shape (Crisp White Bold Strokes) */}
-      <g stroke={mColor} strokeWidth="8" strokeLinecap="round" strokeLinejoin="round">
-        {/* Left vertical stem */}
-        <path d="M 28 76 L 31 25" />
-        {/* M inner diagonals */}
-        <path d="M 31 25 L 46 43 L 56 24" />
-        {/* Right stem top section */}
-        <path d="M 56 24 L 57 42" />
-        {/* Right stem bottom stub */}
-        <path d="M 59 63 L 60 76" />
-      </g>
+      {/* M Shape */}
+      <path
+        d="M 22 88 L 26 23 L 48 48 L 64 16 L 64 84"
+        stroke={mColor}
+        strokeWidth="10"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
 
-      {/* K Shape (Accent Stroke with angled top and curved hook tail) */}
-      <g stroke={accentColor} strokeWidth="8" strokeLinecap="round" strokeLinejoin="round" fill="none">
-        <path d="M 71 31 L 53 50 C 58 60 67 72 78 70 C 86 68 87 56 81 48" />
-      </g>
+      {/* K Chevrons (Vibrant Red) */}
+      <path
+        d="M 92 24 L 67 55 L 98 76"
+        stroke={accentColor}
+        strokeWidth="10"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
     </svg>
   );
 }
 
+export function MKLogoBadge({
+  className = "w-8 h-8",
+  size,
+  variant = "dark",
+}: {
+  className?: string;
+  size?: number;
+  variant?: "dark" | "glass" | "transparent";
+}) {
+  const bgClass =
+    variant === "glass"
+      ? "bg-neutral-900/80 backdrop-blur-sm border border-neutral-800/80 shadow-sm"
+      : variant === "dark"
+      ? "bg-neutral-950 border border-neutral-800/80 shadow-inner"
+      : "";
+
+  return (
+    <div
+      className={`relative inline-flex items-center justify-center rounded-lg p-1.5 transition-all duration-200 group-hover:border-neutral-700 ${bgClass} ${className}`}
+      style={size ? { width: size, height: size } : undefined}
+    >
+      <MKLogo
+        className="w-full h-full text-white"
+        accentColor="#FF1E1E"
+      />
+    </div>
+  );
+}

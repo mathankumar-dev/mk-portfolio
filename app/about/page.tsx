@@ -12,10 +12,10 @@ export default function AboutPage() {
       <div className="max-w-3xl mx-auto px-6 space-y-12">
         <header className="space-y-3">
           <h1 className="text-3xl font-semibold text-white tracking-tight">About</h1>
-          <p className="text-sm text-neutral-500 font-mono">Flutter &amp; Full-Stack Software Developer</p>
+          <p className="text-sm text-neutral-300 font-mono">Flutter &amp; Full-Stack Software Developer</p>
         </header>
 
-        <section className="space-y-4 text-sm sm:text-base text-neutral-300 leading-relaxed">
+        <section className="space-y-4 text-sm sm:text-base text-neutral-200 leading-relaxed">
           <p>
             I’m <strong className="text-white font-medium">Mathankumar V</strong>. I build reliable cross-platform mobile applications, publish open-source Flutter packages on <strong className="text-white">pub.dev</strong>, and architect full-stack web platforms with clean system design.
           </p>
@@ -31,7 +31,7 @@ export default function AboutPage() {
         </section>
 
         <section className="space-y-4 sleek-border-t pt-8">
-          <h2 className="text-xs font-mono text-neutral-500 uppercase tracking-wider">Published Flutter Packages</h2>
+          <h2 className="text-xs font-mono text-neutral-300 uppercase tracking-wider">Published Flutter Packages</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
             <a
               href="https://pub.dev/packages/cupertino_anchor"
@@ -41,9 +41,9 @@ export default function AboutPage() {
             >
               <div className="flex items-center justify-between">
                 <h3 className="text-sm font-medium text-white">cupertino_anchor</h3>
-                <span className="text-[10px] font-mono text-emerald-400 bg-emerald-950/40 px-2 py-0.5 rounded border border-emerald-800/40">pub.dev</span>
+                <span className="text-[10px] font-mono text-emerald-300 bg-emerald-950/60 px-2 py-0.5 rounded border border-emerald-800/60">pub.dev</span>
               </div>
-              <p className="text-xs text-neutral-400 leading-relaxed">
+              <p className="text-xs text-neutral-300 leading-relaxed">
                 Zero-flicker dynamic positioning Cupertino dropdown &amp; picker with native iOS popover aesthetics.
               </p>
             </a>
@@ -56,9 +56,9 @@ export default function AboutPage() {
             >
               <div className="flex items-center justify-between">
                 <h3 className="text-sm font-medium text-white">activity_logger</h3>
-                <span className="text-[10px] font-mono text-emerald-400 bg-emerald-950/40 px-2 py-0.5 rounded border border-emerald-800/40">pub.dev</span>
+                <span className="text-[10px] font-mono text-emerald-300 bg-emerald-950/60 px-2 py-0.5 rounded border border-emerald-800/60">pub.dev</span>
               </div>
-              <p className="text-xs text-neutral-400 leading-relaxed">
+              <p className="text-xs text-neutral-300 leading-relaxed">
                 Structured, production-safe application activity logger with component tags and custom sinks.
               </p>
             </a>
@@ -66,25 +66,25 @@ export default function AboutPage() {
         </section>
 
         <section className="space-y-4 sleek-border-t pt-8">
-          <h2 className="text-xs font-mono text-neutral-500 uppercase tracking-wider">Engineering Philosophy</h2>
+          <h2 className="text-xs font-mono text-neutral-300 uppercase tracking-wider">Engineering Philosophy</h2>
           <div className="space-y-3">
             <div className="sleek-card rounded-lg p-4 space-y-1">
               <h3 className="text-sm font-medium text-white">Offline-First by Design</h3>
-              <p className="text-xs text-neutral-400 leading-relaxed">
+              <p className="text-xs text-neutral-300 leading-relaxed">
                 Mobile connections drop unpredictably. Applications should cache transactions locally first (using Hive/SQLite), give instantaneous feedback, and sync reliably in the background.
               </p>
             </div>
 
             <div className="sleek-card rounded-lg p-4 space-y-1">
               <h3 className="text-sm font-medium text-white">Predictable, Immutable State &amp; RBAC</h3>
-              <p className="text-xs text-neutral-400 leading-relaxed">
+              <p className="text-xs text-neutral-300 leading-relaxed">
                 Unidirectional data flow and strict Role-Based Access Control ensure data integrity across complex enterprise workflows.
               </p>
             </div>
 
             <div className="sleek-card rounded-lg p-4 space-y-1">
               <h3 className="text-sm font-medium text-white">Simple, Intentional UI</h3>
-              <p className="text-xs text-neutral-400 leading-relaxed">
+              <p className="text-xs text-neutral-300 leading-relaxed">
                 Clean typography, crisp layouts, and fast load times matter more than heavy decorative animations.
               </p>
             </div>

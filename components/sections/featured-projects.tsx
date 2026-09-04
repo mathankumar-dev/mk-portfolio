@@ -11,11 +11,11 @@ export function FeaturedProjects() {
         <div className="flex items-center justify-between mb-8">
           <div>
             <h2 className="text-xl font-semibold text-white tracking-tight">Selected Projects</h2>
-            <p className="text-xs text-neutral-500 mt-0.5">Mobile applications, utilities, and full-stack software.</p>
+            <p className="text-xs text-neutral-400 mt-0.5">Mobile applications, utilities, and full-stack software.</p>
           </div>
           <Link
             href="/projects"
-            className="text-xs text-neutral-400 hover:text-white transition-colors"
+            className="text-xs text-neutral-300 hover:text-white transition-colors"
           >
             All projects →
           </Link>

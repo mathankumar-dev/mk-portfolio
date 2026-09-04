@@ -12,7 +12,7 @@ export function ContactSection() {
           <h2 className="text-2xl sm:text-3xl font-semibold text-white tracking-tight">
             Let’s collaborate.
           </h2>
-          <p className="text-sm sm:text-base text-neutral-400 max-w-xl leading-relaxed">
+          <p className="text-sm sm:text-base text-neutral-300 max-w-xl leading-relaxed">
             Have an application to build or looking for an experienced Flutter &amp; Full-Stack developer? Feel free to reach out directly.
           </p>
 

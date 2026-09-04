@@ -1,15 +1,20 @@
-"use client";
+import { MKLogo } from "@/components/ui/logo";
 
 export function Footer() {
   return (
-    <footer className="mt-auto sleek-border-t bg-black py-12 text-xs text-neutral-500">
+    <footer className="mt-auto sleek-border-t bg-black py-12 text-xs text-neutral-400">
       <div className="max-w-4xl mx-auto px-6 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
-        <div>
-          <p className="text-neutral-400 font-medium">Mathankumar V</p>
-          <p className="text-neutral-600 mt-0.5">Flutter &amp; Full-Stack Software Developer</p>
+        <div className="flex items-center gap-3">
+          <div className="w-6 h-6 rounded bg-neutral-900 border border-neutral-800 flex items-center justify-center p-0.5">
+            <MKLogo className="w-full h-full text-white" />
+          </div>
+          <div>
+            <p className="text-neutral-200 font-medium">Mathankumar V</p>
+            <p className="text-neutral-400 mt-0.5">Flutter &amp; Full-Stack Software Developer</p>
+          </div>
         </div>
 
-        <div className="flex items-center gap-5 text-neutral-400">
+        <div className="flex items-center gap-5 text-neutral-300">
           <a
             href="https://github.com/mathankumar-dev"
             target="_blank"

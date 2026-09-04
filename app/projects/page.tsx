@@ -21,7 +21,7 @@ export default function ProjectsPage() {
       <div className="max-w-4xl mx-auto px-6 space-y-8">
         <div>
           <h1 className="text-3xl font-semibold text-white tracking-tight">Projects &amp; Packages</h1>
-          <p className="text-sm text-neutral-400 mt-1">A curated archive of mobile applications, published Flutter packages on pub.dev, and full-stack software.</p>
+          <p className="text-sm text-neutral-300 mt-1">A curated archive of mobile applications, published Flutter packages on pub.dev, and full-stack software.</p>
         </div>
 
         {/* Filter Pills */}
@@ -33,7 +33,7 @@ export default function ProjectsPage() {
               className={`px-3 py-1.5 rounded-md text-xs font-mono transition-colors cursor-pointer ${
                 activeCategory === cat
                   ? "bg-white text-black font-medium"
-                  : "bg-neutral-900 text-neutral-400 border border-neutral-800 hover:text-white"
+                  : "bg-neutral-900 text-neutral-300 border border-neutral-800 hover:text-white"
               }`}
             >
               {cat}
