@@ -41,7 +41,7 @@ export function Hero() {
             </h1>
 
             <p className="text-sm sm:text-base text-neutral-600 dark:text-neutral-300 leading-relaxed max-w-xl">
-              I’m <span className="text-neutral-900 dark:text-white font-medium">Mathankumar V</span>. I build cross-platform mobile apps with Flutter (Riverpod, Hive offline persistence) and full-stack systems with Spring Boot, Java, React.js, and Next.js.
+              I’m <span className="text-neutral-900 dark:text-white font-medium">Mathankumar V</span>. I build cross-platform mobile apps with Flutter (Bloc, Riverpod, GetX, Clean Architecture, Hive offline persistence) and full-stack systems with Spring Boot, Java, React.js, and Next.js.
             </p>
 
             {/* Direct Minimal Actions */}

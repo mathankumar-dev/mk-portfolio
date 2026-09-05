@@ -35,12 +35,15 @@ export const metadata: Metadata = {
     template: "%s | Mathankumar V",
   },
   description:
-    "Production-grade Flutter & Full-Stack developer portfolio showcasing enterprise mobile apps, clean Riverpod architectures, audio DSP utilities, and modern web systems.",
+    "Production-grade Flutter & Full-Stack developer portfolio showcasing enterprise mobile apps, Bloc & Riverpod clean architectures, audio DSP utilities, and modern web systems.",
   keywords: [
     "Flutter Developer",
     "Full-Stack Engineer",
     "Dart",
+    "Bloc",
     "Riverpod",
+    "GetX",
+    "Clean Architecture",
     "Next.js",
     "TypeScript",
     "Mobile App Development",

@@ -38,7 +38,7 @@ export function AboutPreview() {
                 <h4 className="font-semibold text-white text-base">Mobile Architecture</h4>
               </div>
               <p className="text-xs sm:text-sm text-slate-400 leading-normal">
-                Flutter, Riverpod, clean feature-first architecture, background geolocation, offline sync pipelines.
+                Flutter (Bloc, Riverpod, GetX), clean feature-first architecture, background geolocation, offline sync pipelines.
               </p>
             </div>
 

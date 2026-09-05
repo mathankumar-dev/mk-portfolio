@@ -18,7 +18,8 @@ export const SKILL_CATEGORIES: SkillCategory[] = [
       { name: "Dart", level: "Advanced", highlight: true, description: "Async streams, isolates, strong typing" },
       { name: "Bloc", level: "Advanced", highlight: true, description: "Event-driven state streams, state-to-UI mapping" },
       { name: "Riverpod", level: "Advanced", highlight: true, description: "Immutable state, provider families, reactive bindings" },
-      { name: "GetX", level: "Advanced", description: "Reactive state, route management, dependency injection" },
+      { name: "GetX", level: "Advanced", highlight: true, description: "Reactive state, route management, dependency injection" },
+      { name: "Clean Architecture", level: "Advanced", highlight: true, description: "Domain, data & presentation layer separation, testability" },
       { name: "Provider", level: "Advanced", description: "ChangeNotifier, scoped state bindings" },
       { name: "Hive / SQLite", level: "Advanced", highlight: true, description: "Offline persistence, TypeAdapters, local caching" }
     ]
